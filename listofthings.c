@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <stdbool.h>
 #include <stdint.h>
 #include <time.h>
 
@@ -29,16 +27,13 @@ int main()
     }
     printf("\n");
 
-    struct thing_node *head = malloc(sizeof(struct thing_node));
-    struct thing_node *tail = malloc(sizeof(struct thing_node));
-    struct thing_node *currThang = malloc(sizeof(struct thing_node));
+    struct thing_node *headThang = malloc(sizeof(struct thing_node));
+    struct thing_node *tailThang = malloc(sizeof(struct thing_node));
 
     //always start off with 67
-    head->data = 67;
-    head->prev = tail;
-    head->next = NULL;
+    headThang->data = 67;
 
-    currThang = head;
+    tailThang = headThang;
 
     for (int i = 0; i < 5; i++)
     {
@@ -47,22 +42,41 @@ int main()
 
         newThang->data = arr[i];
 
-        newThang->prev = currThang;
-        newThang->next = head;
+        newThang->prev = tailThang;
+        newThang->next = headThang;
 
-        tail = newThang;
-        currThang->next = newThang;
-        currThang = newThang;
+        tailThang->next = newThang;
+
+        tailThang = newThang;
     }
+
+    headThang->prev = tailThang;
 
     //print list
 
     printf("List: ");
-    currThang = head;
     for (int i = 0; i < 6; i++)
     {
-        printf("%d ", currThang->data);
-        currThang = currThang->next;
+        printf("%d ", headThang->data);
+        headThang = headThang->next;
+    }
+    printf("\n");
+
+    //circular 
+
+    printf("Circular: ");
+    for (int i = 0; i < 18; i++)
+    {
+        printf("%d ", headThang->data);
+        headThang = headThang->next;
+    }
+    printf("\n");
+
+    printf("Reverse: ");
+    for (int i = 0; i < 18; i++)
+    {
+        printf("%d ", tailThang->data);
+        tailThang = tailThang->prev;
     }
     printf("\n");
 

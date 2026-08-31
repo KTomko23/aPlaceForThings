@@ -1,0 +1,1 @@
+/home/typo/Documents/Personal/aPlaceForThings/listOfRustyThings/listOfRustyThings/target/debug/listOfRustyThings: /home/typo/Documents/Personal/aPlaceForThings/listOfRustyThings/listOfRustyThings/src/main.rs

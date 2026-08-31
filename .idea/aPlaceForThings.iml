@@ -2,8 +2,10 @@
 <module type="EMPTY_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/listOfRustyThings/listOfRustyThings/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/rustList/rustyList/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/rustThing/how2rust/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/listOfRustyThings/listOfRustyThings/target" />
       <excludeFolder url="file://$MODULE_DIR$/rustList/rustyList/target" />
       <excludeFolder url="file://$MODULE_DIR$/rustThing/how2rust/target" />
     </content>

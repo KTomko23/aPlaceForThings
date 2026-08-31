@@ -56,7 +56,7 @@ fn main()
     let b = Box::new(42);
 
     //int *arr = malloc(sizeof(int) * n);
-    let mut v = Vec::with_capacity(10);
+    let mut v  = Vec::with_capacity(10);
     v.push(1);
     v.push(2);
 
